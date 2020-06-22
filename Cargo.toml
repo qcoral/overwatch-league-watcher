@@ -1,0 +1,12 @@
+[package]
+name = "overwatch-league-watcher"
+version = "0.1.0"
+authors = ["Dari <Dari@dari.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+webbrowser = "0.5.4"
+enigo = "0.0.14"
+chrono = "0.4.11"
