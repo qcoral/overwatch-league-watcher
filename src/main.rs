@@ -18,7 +18,7 @@ fn main() {
         time.truncate(5);
         time = time.chars().rev().collect::<String>();
         println!("{}", time);
-        if date == String::from("Sun") || date == String::from("Sat") && time == String::from("07:10") || time == String::from("17:10") {
+        if date == String::from("Sun") || date == String::from("Sat") && time == String::from("08:05") || time == String::from("18:35") {
             println!("time!");
             if webbrowser::open("https://overwatchleague.com/en-us").is_ok() {
                 enigo.mouse_move_to(500, 500);
