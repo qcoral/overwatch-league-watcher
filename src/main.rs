@@ -19,9 +19,9 @@ fn main() {
         time = time.chars().rev().collect::<String>();
         time.truncate(5);
         time = time.chars().rev().collect::<String>();
-        if time == String::from("10:10") {
-            open_contenders()
-        }
+        if time == String::from("10:30") {
+            open_contenders();
+        } //delete this elif after
         sleep_ms(60000);
     }
 }
@@ -33,7 +33,13 @@ fn open_owl() {
         //plays video
         enigo.mouse_move_to(500, 500);
         sleep_ms(3000);
+        for x in 0..4 {
+            enigo.mouse_scroll_y(-1);
+            sleep_ms(20);
+        }
+        sleep_ms(1000);
         enigo.mouse_down(MouseButton::Left);
+        sleep_ms(300);
         enigo.mouse_up(MouseButton::Left);
     }
 }
@@ -49,7 +55,9 @@ fn open_contenders() {
             enigo.mouse_scroll_y(-1);
             sleep_ms(20);
         }
-        //enigo.mouse_down(MouseButton::Left);
-        //enigo.mouse_up(MouseButton::Left);
+        sleep_ms(1000);
+        enigo.mouse_down(MouseButton::Left);
+        sleep_ms(300);
+        enigo.mouse_up(MouseButton::Left);
     }
 }
