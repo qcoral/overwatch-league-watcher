@@ -7,7 +7,8 @@ use std::time::Duration;
 
 fn main() {
     let mut size = String::new();
-    println!("Dari's Overwatch League watcher. yep that's pretty much it.\nSource code at https://github.com/Dari420/overwatch-league-watcher");
+    println!("Dari's Overwatch League watcher. yep that's pretty much it.\n
+    Source code at https://github.com/dari-studios/overwatch-league-watcher\nhttps://daristudios.ca/socials if you need help");
     loop {
         let current_time: DateTime<Utc> = Utc::now();
         println!("UTC now is: {}", current_time.format("%a %b %e %T %Y"));
@@ -19,9 +20,15 @@ fn main() {
         time = time.chars().rev().collect::<String>();
         time.truncate(5);
         time = time.chars().rev().collect::<String>();
-        if time == String::from("10:30") {
-            open_contenders();
-        } //delete this elif after
+        if date == String::from("Fri") && time == String::from("10:10") || time == String::from("18:10") {
+            open_owl();
+        }
+        else if date == String::from("Sat") && time == String::from("10:10") || time == String::from("18:10") {
+            open_owl();
+        }
+        else if date == String::from("Sun") && time == String::from("10:10") || time == String::from("18:10") {
+            open_owl();
+        }
         sleep_ms(60000);
     }
 }
