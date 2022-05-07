@@ -20,13 +20,14 @@ fn main() {
         time = time.chars().rev().collect::<String>();
         time.truncate(5);
         time = time.chars().rev().collect::<String>();
-        if date == String::from("Fri") && time == String::from("10:10") || time == String::from("18:10") {
+        open_owl();
+        if date == String::from("Fri") && time == String::from("10:15") || time == String::from("18:15") {
             open_owl();
         }
-        else if date == String::from("Sat") && time == String::from("10:10") || time == String::from("18:10") {
+        else if date == String::from("Sat") && time == String::from("10:15") || time == String::from("18:15") {
             open_owl();
         }
-        else if date == String::from("Sun") && time == String::from("10:10") || time == String::from("18:10") {
+        else if date == String::from("Sun") && time == String::from("10:15") || time == String::from("18:15") {
             open_owl();
         }
         sleep_ms(60000);
