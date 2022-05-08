@@ -20,17 +20,29 @@ fn main() {
         time = time.chars().rev().collect::<String>();
         time.truncate(5);
         time = time.chars().rev().collect::<String>();
-        open_owl();
-        if date == String::from("Fri") && time == String::from("10:15") || time == String::from("18:15") {
+        if date == String::from("Fri") && check_time(&time) {
             open_owl();
         }
-        else if date == String::from("Sat") && time == String::from("10:15") || time == String::from("18:15") {
+        else if date == String::from("Sat") && check_time(&time) {
             open_owl();
         }
-        else if date == String::from("Sun") && time == String::from("10:15") || time == String::from("18:15") {
+        else if date == String::from("Sun") && check_time(&time) {
             open_owl();
         }
         sleep_ms(60000);
+    }
+}
+
+fn check_time(time: &String) -> bool {
+    //change your time (utc)
+    let mut time1 = "10:15";
+    let mut time2 = "18:15";
+
+    if time == &String::from(time1) || time == &String::from(time2) {
+        return true;
+    }
+    else {
+        return false;
     }
 }
 
