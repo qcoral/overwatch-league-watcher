@@ -20,7 +20,11 @@ fn main() {
         time = time.chars().rev().collect::<String>();
         time.truncate(5);
         time = time.chars().rev().collect::<String>();
-        if date == String::from("Fri") && check_time(&time) {
+        open_owl();
+        if date == String::from("Thu") && check_time(&time) {
+            open_owl();
+        }
+        else if date == String::from("Fri") && check_time(&time) {
             open_owl();
         }
         else if date == String::from("Sat") && check_time(&time) {
@@ -53,8 +57,8 @@ fn open_owl() {
         //plays video
         enigo.mouse_move_to(500, 500);
         sleep_ms(3000);
-        for x in 0..4 {
-            enigo.mouse_scroll_y(-1);
+        for x in 0..12 {
+            enigo.mouse_scroll_y(1);
             sleep_ms(20);
         }
         sleep_ms(1000);
