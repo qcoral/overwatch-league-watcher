@@ -39,9 +39,10 @@ fn main() {
 fn check_time(time: &String) -> bool {
     //change your time (utc)
     let mut time1 = "10:15";
-    let mut time2 = "18:15";
+    let mut time2 = "15:30";
+    let mut time3 = "19:15";
 
-    if time == &String::from(time1) || time == &String::from(time2) {
+    if time == &String::from(time1) || time == &String::from(time2) || time ==&String::from(time3) {
         return true;
     }
     else {
