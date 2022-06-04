@@ -20,7 +20,6 @@ fn main() {
         time = time.chars().rev().collect::<String>();
         time.truncate(5);
         time = time.chars().rev().collect::<String>();
-        open_owl();
         if date == String::from("Thu") && check_time(&time) {
             open_owl();
         }
