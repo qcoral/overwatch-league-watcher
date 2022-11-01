@@ -20,15 +20,15 @@ fn main() {
         time.truncate(5);
         time = time.chars().rev().collect::<String>();
         if date == String::from("Tue") && check_time(&time) {
-            open_contenders();
+            open_owl();
+        }
+        else if date == String::from("Wed") && check_time(&time) {
+            open_owl();
+        }
+        else if date == String::from("Thu") && check_time(&time) {
+            open_owl();
         }
         else if date == String::from("Fri") && check_time(&time) {
-            open_owl();
-        }
-        else if date == String::from("Sat") && check_time(&time) {
-            open_owl();
-        }
-        else if date == String::from("Sun") && check_time(&time) {
             open_owl();
         }
         sleep(Duration::from_millis(60000));
@@ -37,9 +37,9 @@ fn main() {
 
 fn check_time(time: &String) -> bool {
     //change your time (utc)
-    let time1 = "23:59";
-    let time2 = "16:15";
-    let time3 = "22:15";
+    let time1 = "13:30";
+    let time2 = "21:30";
+    let time3 = "21:30";
 
     if time == &String::from(time1) || time == &String::from(time2) || time ==&String::from(time3) {
         return true;
